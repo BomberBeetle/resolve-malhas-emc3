@@ -7,7 +7,7 @@ tabela_ord = np.zeros(shape=(n), dtype=np.float_)
 
 for i in range(n):
     
-    tabela_ord[i] = 0-float(input("Digite a tensão da malha {}: ".format(i+1)))
+    tabela_ord[i] = float(input("Digite a tensão da malha {}: ".format(i+1)))
 
 for i in range(n):
 
