@@ -4,7 +4,7 @@
 #Esse script assume que todas malhas estão assinaladas uma direção horária
 
 import numpy as np
-print("Resolutor de Circuitos de Malha.\n Importante: considere todas as malhas como estando em direção horária.")
+print("Resolutor de Circuitos de Malha.\nImportante: considere todas as malhas como estando em direção horária.")
 n = int(input("Digite o número de malhas: "))
 
 tabela_coef= np.zeros(shape=(n, n), dtype=np.float_)
@@ -35,7 +35,7 @@ for i in range(n):
         
 
 res = np.linalg.solve(tabela_coef, tabela_ord)
-#Resolve o nosso sistema de equações LKT usando a função "linalg.solve" da biblioteca NumPy, que resolve sistemas lineares em geral usando uma tabela de coeficientes e uma tabela de ordenadas. Essa função, em turno, usa da biblioteca OpenBLAS, que providencia implementações eficientes de baixo nível para operações simples de álgebra linear.
+#Resolve o nosso sistema de equações LKT usando a função "linalg.solve" da biblioteca NumPy, que resolve sistemas lineares em geral usando uma tabela de coeficientes e uma tabela de ordenadas. Essa função, em turno, usa internamente da função _gesv da biblioteca LAPACK, que providencia implementações eficientes de baixo nível para operações simples de álgebra linear.
 
 for idx, val in enumerate(res, start=1):
     print("Corrente da malha {}: {}A".format(idx, val))
