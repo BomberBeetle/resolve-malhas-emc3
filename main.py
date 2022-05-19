@@ -1,6 +1,5 @@
 # 18/05/2022
-# Código por André Luiz Ferrari de Arruda e Letícia... esqueci o nome inteiro dela
-
+# Código por André Luiz Ferrari de Arruda, Letícia Sousa da Silva e Fernanda Miyuki Egawa
 #Esse script assume que todas malhas estão assinaladas uma direção horária
 
 import numpy as np
